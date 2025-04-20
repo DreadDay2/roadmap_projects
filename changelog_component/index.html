@@ -12,22 +12,46 @@
         <span class="gray_font">Here's everything we have shipped in the past few days</span>
     </header>
     <main>
-        <div class="dates">
-            <span class="gray_font_dates">September 3, 2024</span>
-            <span class="gray_font_dates">September 3, 2024</span>
-            <span class="gray_font_dates">September 3, 2024</span>
-            <span class="gray_font_dates">September 3, 2024</span>
-            <span class="gray_font_dates">September 3, 2024</span>
-            <span class="gray_font_dates">September 3, 2024</span>
-            <span class="gray_font_dates">September 3, 2024</span>
-        </div>
-        <div class="vertical_line">
-
-        </div>
-        <div class="change_description">
-            <span class="black_font_description">Announcing Projects on Frontend Roadmap</span>
+        <div class="container">
+            <div class="dates">
+                <span class="gray_font_dates">September 3, 2024</span>
+                <span class="gray_font_dates">September 3, 2024</span>
+                <span class="gray_font_dates">September 3, 2024</span>
+                <span class="gray_font_dates">September 3, 2024</span>
+                <span class="gray_font_dates">September 3, 2024</span>
+                <span class="gray_font_dates">September 3, 2024</span>
+                <span class="gray_font_dates">September 3, 2024</span>
+            </div>
+            <div class="vertical_line">
+                <!--A single vertical line-->
+            </div>
+            <div class="change_description">
+                <span class="black_font_content"></span>
+                <span class="black_font_content"></span>
+                <span class="black_font_content"></span>
+                <span class="black_font_content"></span>
+                <span class="black_font_content"></span>
+                <span class="black_font_content"></span>
+                <span class="black_font_content"></span>
+            </div>
         </div>
     </main>
     <button>Visit Complete Changelog</button>
+    <script>
+        const change_description = new Array(
+            "Announcing Projects on Frontend Roadmap",
+            "Build your learning habits with learning streaks",
+            "Git and GitHub Roadmap",
+            "Submit your project solution and get feedback",
+            "Backend Project Ideas",
+            "Redis roadmap",
+            "Changelog page to help you stay in the loop"
+        );
+        const span_description = document.querySelectorAll(".black_font_content");
+        for(let i = 0; i < span_description.length; i++){
+            const index = Math.floor(Math.random() * change_description.length);
+            span_description[i].innerText = change_description[index];
+        }
+    </script>
 </body>
 </html>
